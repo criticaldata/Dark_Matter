@@ -3,7 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%224%22 fill=%22%23A31F34%22/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="media/favicon.png">
+<link rel="canonical" href="https://criticaldata.github.io/Dark_Matter/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Dark Matter of Clinical Data">
+<meta property="og:description" content="Why EHR data alone cannot separate a patient's biology from the care they received. Interactive explainer, narrated videos and paper from MIT Critical Data.">
+<meta property="og:url" content="https://criticaldata.github.io/Dark_Matter/">
+<meta property="og:image" content="https://criticaldata.github.io/Dark_Matter/media/poster_main.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>The Dark Matter of Clinical Data</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -33,8 +40,11 @@ a{color:var(--mit-red);text-decoration:none} a:hover{text-decoration:underline}
 /* nav */
 nav.topnav{background:var(--dark);position:sticky;top:env(safe-area-inset-top,0px);z-index:100}
 nav.topnav .inner{display:flex;align-items:center;justify-content:space-between;min-height:60px;gap:1rem}
-.brand{color:var(--white);font-weight:700;letter-spacing:.02em;display:flex;gap:.6rem;align-items:baseline;flex-wrap:wrap}
-.brand .mit{color:var(--mit-red)} .brand small{color:#aaa;font-weight:400;font-size:.8rem;letter-spacing:.02em}
+.brand{color:var(--white);display:flex;gap:.9rem;align-items:center;flex-wrap:wrap;text-decoration:none}
+.brand:hover{text-decoration:none}
+.brand img{height:32px;width:auto;display:block}
+.flogo{height:44px;width:auto;display:block;margin:0 auto 1rem}
+.brand small{color:#aaa;font-weight:400;font-size:.8rem;letter-spacing:.02em}
 .navlinks{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0}
 .navlinks a{color:#ccc;font-size:.85rem;letter-spacing:.03em;text-transform:uppercase}
 .navlinks a:hover{color:var(--white);text-decoration:none}
@@ -65,7 +75,7 @@ nav.topnav .inner{display:flex;align-items:center;justify-content:space-between;
 .btn[aria-disabled="true"]{opacity:.5;pointer-events:none}
 
 /* stats */
-.stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2rem;text-align:center}
+.stats-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem;text-align:center}
 .stat-item .number{white-space:nowrap;font-size:clamp(1.3rem,2.5vw,1.9rem);font-weight:700;font-variant-numeric:tabular-nums}
 .stat-item .label{font-size:.8rem;color:#aaa;margin-top:.25rem;text-transform:uppercase;letter-spacing:.04em}
 
@@ -154,7 +164,7 @@ footer p+p{margin-top:.4rem}
 @media (max-width:860px){
   .problem,.videos,.pillars,.bench{grid-template-columns:minmax(0,1fr)}
   .controls{border-right:0;border-bottom:1px solid var(--border)}
-  .stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stats-grid{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:640px){.navlinks{display:none} .band{padding-block:3rem}}
 @media (max-width:480px){.big{grid-template-columns:minmax(0,1fr) minmax(0,1fr)} .big .stat:last-child{grid-column:1/-1}}
@@ -164,7 +174,7 @@ footer p+p{margin-top:.4rem}
 <body>
 
 <nav class="topnav" aria-label="Site"><div class="inner">
-  <div class="brand"><span><span class="mit">MIT</span> Critical Data</span><small>Laboratory for Computational Physiology</small></div>
+  <a class="brand" href="https://criticaldata.mit.edu" target="_blank" rel="noopener"><img src="media/mcd_logo_white.png" alt="MIT Critical Data" width="137" height="32"><small>Laboratory for Computational Physiology</small></a>
   <ul class="navlinks"><li><a href="#watch">Videos</a></li><li><a href="#explore">Explore</a></li><li><a href="#takeaways">Takeaways</a></li><li><a href="#cite">Cite</a></li></ul>
 </div></nav>
 
@@ -184,7 +194,6 @@ footer p+p{margin-top:.4rem}
   <div class="stat-item"><div class="number">9.6 pts</div><div class="label">Mortality gap with identical biology</div></div>
   <div class="stat-item"><div class="number">0.247 / 0.556</div><div class="label">Bits from the same observed data</div></div>
   <div class="stat-item"><div class="number">6.3%</div><div class="label">Model error needed to explain the gap</div></div>
-  <div class="stat-item"><div class="number">0</div><div class="label">Patient records used</div></div>
 </div></section>
 
 <section class="band light" aria-labelledby="h-problem"><div class="inner problem">
@@ -387,6 +396,7 @@ footer p+p{margin-top:.4rem}
 </div></section>
 
 <footer><div class="inner">
+  <img class="flogo" src="media/mcd_logo_white.png" alt="MIT Critical Data" width="190" height="44">
   <p>&copy; 2026 MIT Critical Data &nbsp;&middot;&nbsp; Laboratory for Computational Physiology, Massachusetts Institute of Technology</p>
   <p><a href="https://criticaldata.mit.edu" target="_blank" rel="noopener">criticaldata.mit.edu</a> &nbsp;&middot;&nbsp; <a href="https://accessibility.mit.edu" target="_blank" rel="noopener">Accessibility</a> &nbsp;&middot;&nbsp; Correspondence: <span class="mono">shahinbu@bu.edu</span></p>
 </div></footer>
