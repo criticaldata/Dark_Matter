@@ -2,7 +2,7 @@
 
 Interactive explainer for the paper *The Dark Matter of Clinical Data: an identification limit on disentangling physiology from care process in electronic health records* (Shahin et al., 2026).
 
-**Live site:** enable GitHub Pages (Settings → Pages → Deploy from branch → `main` / root). The site will appear at `https://<your-username>.github.io/<repo-name>/`.
+**Live site:** enable GitHub Pages (Settings → Pages → Deploy from branch → `main` / root). The site will appear at `https://<your-username>.github.io/<rame>/`.
 
 ## What's here
 | Path | Contents |
